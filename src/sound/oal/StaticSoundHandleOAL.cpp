@@ -78,8 +78,7 @@ namespace oxygine
             //tm = bytes / Channels / fr;
             //bytes =
             _pos = (tm * ch * fr) / 1000;
-            int q = 0;
-
+ 
         }
     }
 

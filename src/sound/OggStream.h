@@ -39,8 +39,8 @@ namespace oxygine
         fileRMem            _memStream;
         OggVorbis_File      _vorbisFile;
 
-        vorbis_info* _info;
-
         int _section;
+        
+        vorbis_info* _info;
     };
 }

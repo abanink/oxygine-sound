@@ -34,17 +34,17 @@ namespace oxygine
     }
 
     SoundInstance::SoundInstance(SoundPlayer* player, SoundHandle* h):
-        _player(player),
         _handle(h),
-        _startTime(0),
-        _fadeInMS(0),
-        _fadeOutMS(0),
+        _player(player),
         _state(Paused),
         _volume(1.0f),
+        _startTime(0),
         _startFadeIn(0),
+        _startFadeOut(0),
         _fadedOut(0),
-        _finished(false),
-        _startFadeOut(0)
+        _fadeInMS(0),
+        _fadeOutMS(0),
+        _finished(false)
     {
 
     }

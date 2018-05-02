@@ -42,9 +42,9 @@ namespace oxygine
         std::vector<ALuint> _freeBuffers;
         std::vector<ALuint> _buffers;
 
-        float _volume;
-
         ALCdevice* _device;
         ALCcontext* _context;
+        
+        float _volume;
     };
 }

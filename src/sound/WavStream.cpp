@@ -55,7 +55,7 @@ namespace oxygine
         _pcm = header.Subchunk2Size  / _channels / 2;
         _dataSize = header.Subchunk2Size;
         _dataPos = 0;
-        OX_ASSERT(header.Subchunk2Size == _pcm * _channels * 2);
+        OX_ASSERT(header.Subchunk2Size ==  (uint32_t)_pcm * _channels * 2);
         _ended = false;
 
         return true;
@@ -81,7 +81,7 @@ namespace oxygine
         {
             int leftSize = _dataSize - _dataPos;
             int bytes2read = std::min(leftSize, bufferSize);
-            int r = file::read(_fh, data, bytes2read);
+            file::read(_fh, data, bytes2read);
             data += bytes2read;
             _dataPos += bytes2read;
             bufferSize -= bytes2read;
@@ -107,7 +107,7 @@ namespace oxygine
     void WavStream::decodeAll(void* data, int bufferSize)
     {
         file::read(_fh, data, bufferSize);
-        int p = file::tell(_fh);
+        file::tell(_fh);
         _dataPos = _dataSize;
         _ended = true;
     }

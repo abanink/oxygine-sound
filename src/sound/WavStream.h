@@ -26,10 +26,11 @@ namespace oxygine
         void release();
 
         file::handle _fh;
-        fileRMem _memfile;
 
+        bool _close;
         int _dataSize;
         int _dataPos;
-        bool _close;
+        
+        fileRMem _memfile;
     };
 }

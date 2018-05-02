@@ -22,8 +22,8 @@ namespace oxygine
 
 
         int _duration;
-        int _pos;
         int _lastUpdate;
+        int _pos;
 
 
         timeMS _getPosition() const override;

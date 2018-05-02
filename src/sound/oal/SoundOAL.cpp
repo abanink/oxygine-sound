@@ -13,7 +13,7 @@ namespace oxygine
 
     void OAL_CHECK();
 
-    SoundOAL::SoundOAL(const string& path, file::handle fh): _alBuffer(0), _format(0), _timeMS(0), _fileName(path), _type(Unknown)
+    SoundOAL::SoundOAL(const string& path, file::handle fh): _format(0), _timeMS(0), _fileName(path), _type(Unknown),_alBuffer(0)
     {
         char header[4];
         if (file::read(fh, header, 4) != 4)

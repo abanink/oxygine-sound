@@ -27,13 +27,12 @@ namespace oxygine
         PlayOptions& pause() { _paused = true; return *this; }
         PlayOptions& seek(timeMS ms) { _seek = ms; return *this; }
 
-
+        bool _looped;
         float _pitch;
-        float _volume;
         timeMS _fadeIn;
         timeMS _fadeOut;
         bool _paused;
-        bool _looped;
+        float _volume;
         timeMS _seek;
     };
 

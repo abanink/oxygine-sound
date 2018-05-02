@@ -31,11 +31,11 @@ namespace oxygine
 
         void _load(LoadResourcesContext* context) override;
         void _unload() override;
+        
+        Sound* _sound;
 
         std::string _file;
         bool _streaming;
-
-        Sound* _sound;
     };
 
 

@@ -97,20 +97,19 @@ namespace oxygine
         EventCallback _cbDone;
         EventCallback _cbAboutDone;
 
-        bool _finished;
-        bool _fadedOut;
-
+        State _state;
+        
         float _volume;//primary volume
         unsigned int _startTime;
 
         int _startFadeIn;
         int _startFadeOut;
+        bool _fadedOut;
 
         int _fadeInMS;
         int _fadeOutMS;
-
-
-        State _state;
+        
+        bool _finished;
     };
 
 
